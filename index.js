@@ -31,8 +31,8 @@ app.use( '*', ( req, res ) => {
 
 
 // Escuchar peticiones
-app.listen( process.env.PORT, () => {
-  console.log( `Servidor corriendo en puerto ${ process.env.PORT }` );
+app.listen( process.env.PORT || 4001, () => {
+  console.log( `Servidor corriendo en puerto ${ process.env.PORT ? process.env.PORT : 4001 }` );
 } );
 
 
